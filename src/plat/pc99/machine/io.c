@@ -73,7 +73,6 @@ text_ega_putchar(int c)
     }
     return 0;
 }
-#endif
 
 #if defined(CONFIG_DEBUG_BUILD) || defined(CONFIG_PRINTING)
 void
