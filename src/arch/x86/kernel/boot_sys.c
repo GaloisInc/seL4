@@ -199,6 +199,8 @@ try_boot_sys_node(cpu_id_t cpu_id)
             )) {
         return false;
     }
+    unsigned int *base_ptr = ptrFromPAddr(0xB8000);
+    printf("Base ptr = %u\n",*base_ptr);
     setCurrentVSpaceRoot(kpptr_to_paddr(X86_GLOBAL_VSPACE_ROOT), 0);
     /* Sync up the compilers view of the world here to force the PD to actually
      * be set *right now* instead of delayed */
